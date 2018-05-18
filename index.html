@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+<script type="text/javascript">
+  $(function() {
+    var submit_form = function(e) {
+      $.getJSON($SCRIPT_ROOT + '/_create_data', {
+        keyword: $('input[name="keyword"]').val()
+      }, function(data) {
+        $('#result').text(data.result);
+        $('input[name=keyword]').focus().select();
+      });
+      return false;
+    };
+    $('a#keyword').bind('click', submit_form);
+    $('input[type=text]').bind('keydown', function(e) {
+      if (e.keyCode == 13) {
+        submit_form(e);
+      }
+    });
+    $('input[name=a]').focus();
+  });
+</script>
+<h1>data generator</h1>
+<p>
+  <input type="text" size="125" name="keyword"> 
+  <span id="result">?</span>
+<p><a href=# id="keyword">submit</a>
+{% endblock %}

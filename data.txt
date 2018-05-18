@@ -1,0 +1,70 @@
+{
+ 	"text": "what is workflow configuration?",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "what do you mean by workflow configuration?",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "what is meant by workflow configuration?",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "tell me what workflow configuration is",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "i want to know what workflow configuration is",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "explain what workflow configuration is",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "i would like to know what workflow configuration is",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "can you tell me about workflow configuration is",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "can you tell me something related to workflow configuration is",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "tell me aboutworkflow configuration",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "i want to know about workflow configuration",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "i would like to know about workflow configuration",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "tell me something related to workflow configuration",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
+{
+ 	"text": "give me something related to workflow configuration",
+ 	"intent":"workflow_configuration",
+ 	"entity":[]
+},
