@@ -5,15 +5,17 @@
     var submit_form = function(e) {
       $.getJSON($SCRIPT_ROOT + '/_create_data', {
         keyword: $('input[name="keyword"]').val(),
-	what: $('#checkwhat:checked').is(':checked'),
-	how: $('#checkhow:checked').is(':checked'),
-	when: $('#checkwhen:checked').is(':checked'),
-	howmany: $('#checkhowmany:checked').is(':checked')
+		intent: $('input[name="intent"]').val(),
+		intentbool: $('input[name="intent"]').val()?'true':'false',
+		entity: $('#enabled:checked').is(':checked'),
+		what: $('#checkwhat:checked').is(':checked'),
+		how: $('#checkhow:checked').is(':checked'),
+		when: $('#checkwhen:checked').is(':checked'),
+		howmany: $('#checkhowmany:checked').is(':checked'),
+		where: $('#checkwhere:checked').is(':checked')
       }, function(data) {
         $('#result').text(data.result);
         $('input[name=keyword]').focus().select();
-	//$('input[name=what]').focus().select();
-	//$('input[name=how]').focus().select();
       });
       return false;
     };
@@ -29,11 +31,14 @@
 </script>
 <h1>data generator</h1>
 <p>
-  <input type="text" size="125" name="keyword"> 
+  keyword: <input type="text" size="125" name="keyword"><br />
+  intent (optional): <input type="text" size="125" name="intent">
   <span id="result">?</span><br />
+  entity enabled: <input type="checkbox" name="enabled" id="enabled"><br /><br /><br />
   what: <input type="checkbox" name="checkwhat" id="checkwhat"><br />
   how: <input type="checkbox" name="checkhow" id="checkhow"><br />
   when: <input type="checkbox" name="checkwhen" id="checkwhen"><br />
-  how many: <input type="checkbox" name="checkhowmany" id="checkhowmany">
+  how many: <input type="checkbox" name="checkhowmany" id="checkhowmany"><br />
+  where: <input type="checkbox" name="checkwhere" id="checkwhere">
 <p><a href=# id="keyword">submit</a>
 {% endblock %}
