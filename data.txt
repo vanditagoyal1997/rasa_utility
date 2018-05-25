@@ -1,172 +1,73 @@
-
 {
 	 "rasa_nlu_data":{
 		 "common_examples": [
 	{
-		"text": "what is voicebot?",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":8,
-				"end":16,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "what is workflow configuration?",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "what do you mean by voicebot?",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":20,
-				"end":28,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "what do you mean by workflow configuration?",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "what is meant by voicebot?",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":17,
-				"end":25,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "what is meant by workflow configuration?",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "tell me what voicebot is",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":13,
-				"end":21,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "tell me what workflow configuration is",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "i want to know what voicebot is",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":20,
-				"end":28,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "i want to know what workflow configuration is",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "explain what voicebot is",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":13,
-				"end":21,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "explain what workflow configuration is",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "i would like to know what voicebot is",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":26,
-				"end":34,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "i would like to know what workflow configuration is",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "can you tell me about voicebot is",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":22,
-				"end":30,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "can you tell me about workflow configuration is",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "can you tell me something related to voicebot is",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":37,
-				"end":45,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "can you tell me something related to workflow configuration is",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "tell me aboutvoicebot",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":13,
-				"end":21,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "tell me aboutworkflow configuration",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "i want to know about voicebot",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":21,
-				"end":29,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "i want to know about workflow configuration",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "i would like to know about voicebot",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":27,
-				"end":35,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "i would like to know about workflow configuration",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "tell me something related to voicebot",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":29,
-				"end":37,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "tell me something related to workflow configuration",
+		"intent":"wf_con",
+		"entity":[]
 	},
 	{
-		"text": "give me something related to voicebot",
-		"intent":"voicebot",
-		"entity":[
-			{
-				"start":29,
-				"end":37,
-				"value":"voicebot",
-				"entity":"voicebot"
-			}
-		]
+		"text": "give me something related to workflow configuration",
+		"intent":"wf_con",
+		"entity":[]
 	}
