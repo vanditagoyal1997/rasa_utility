@@ -8,11 +8,15 @@
 		intent: $('input[name="intent"]').val(),
 		intentbool: $('input[name="intent"]').val()?'true':'false',
 		entity: $('#enabled:checked').is(':checked'),
+		quit: $('#quit:checked').is(':checked'),
 		what: $('#checkwhat:checked').is(':checked'),
 		how: $('#checkhow:checked').is(':checked'),
 		when: $('#checkwhen:checked').is(':checked'),
+		after: $('#checkafter:checked').is(':checked'),
+		before: $('#checkbefore:checked').is(':checked'),
 		howmany: $('#checkhowmany:checked').is(':checked'),
-		where: $('#checkwhere:checked').is(':checked')
+		whereproc: $('#checkwhereproc:checked').is(':checked'),
+		whereobj: $('#checkwhereobj:checked').is(':checked')
       }, function(data) {
         $('#result').text(data.result);
         $('input[name=keyword]').focus().select();
@@ -34,11 +38,16 @@
   keyword: <input type="text" size="125" name="keyword"><br />
   intent (optional): <input type="text" size="125" name="intent">
   <span id="result">?</span><br />
+  
+  To quit after this: <input type="checkbox" name="quit" id="quit"><br />
   entity enabled: <input type="checkbox" name="enabled" id="enabled"><br /><br /><br />
-  what: <input type="checkbox" name="checkwhat" id="checkwhat"><br />
-  how: <input type="checkbox" name="checkhow" id="checkhow"><br />
+  what: <input type="checkbox" name="checkwhat" id="checkwhat">    what do you mean by ____?<br />
+  how (process): <input type="checkbox" name="checkhow" id="checkhow">     how is ____ done? <br />
   when: <input type="checkbox" name="checkwhen" id="checkwhen"><br />
-  how many: <input type="checkbox" name="checkhowmany" id="checkhowmany"><br />
-  where: <input type="checkbox" name="checkwhere" id="checkwhere">
+  after: <input type="checkbox" name="checkafter" id="checkafter">      what happens after ____?<br />  
+  before: <input type="checkbox" name="checkbefore" id="checkbefore">   what happens before ____?<br />
+  how many: <input type="checkbox" name="checkhowmany" id="checkhowmany">    how many __________?<br />
+  where (process): <input type="checkbox" name="checkwhereproc" id="checkwhereproc">   where does ____ take place? <br />
+  where (object): <input type="checkbox" name="checkwhereobj" id="checkwhereobj">   where is ____ located? <br />
 <p><a href=# id="keyword">submit</a>
 {% endblock %}
