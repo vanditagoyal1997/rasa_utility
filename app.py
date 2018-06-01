@@ -37,19 +37,19 @@ def create_data():
     
 	if how=='true':
 		#print("how")
-		create_data_how_process(a,intent,intentbool,entity)
+		create_data_how_process(a,intent,intentbool,entity,quit)
 	if when=='true':
-		create_data_when_present(a,intent,intentbool,entity)
+		create_data_when_present(a,intent,intentbool,entity,quit)
 	if after=='true':
-		create_data_when_after(a,intent,intentbool,entity)
+		create_data_when_after(a,intent,intentbool,entity,quit)
 	if before=='true':
-		create_data_when_before(a,intent,intentbool,entity)
+		create_data_when_before(a,intent,intentbool,entity,quit)
 	if howmany=='true':
-		create_data_howmany(a,intent,intentbool,entity)
+		create_data_howmany(a,intent,intentbool,entity,quit)
 	if whereproc=='true':
-		create_data_where_process(a,intent,intentbool,entity)
+		create_data_where_process(a,intent,intentbool,entity,quit)
 	if whereobj=='true':
-		create_data_where_obj(a,intent,intentbool,entity)
+		create_data_where_obj(a,intent,intentbool,entity,quit)
 	if other=='true':
 		create_data_other(a,intent,intentbool,entity)
 	if quit=='true':
@@ -139,7 +139,7 @@ def create_data_what(a,intent,intentbool,entity,quit):
 		f1.write(content)
 	f1.close()
 
-def create_data_how_process(a,intent,intentbool,entity):
+def create_data_how_process(a,intent,intentbool,entity,quit):
 	f1=open('data/data.json','a')
 	l1=a.split(" ")
 	if intentbool=='true':
@@ -290,7 +290,7 @@ def create_data_how_process(a,intent,intentbool,entity):
 		#print(content)
 		f1.write(content)
 	f1.close()
-def create_data_when_present(a,intent,intentbool,entity):
+def create_data_when_present(a,intent,intentbool,entity,quit):
 	f1=open('data/data.json','a')
 	l1=a.split(" ")
 	if intentbool=='true':
@@ -355,7 +355,7 @@ def create_data_when_present(a,intent,intentbool,entity):
 		f1.write(content1)
 	
 	f1.close()
-def create_data_howmany(a,intent,intentbool,entity):
+def create_data_howmany(a,intent,intentbool,entity,quit):
 	f1=open('data/data.json','a')
 	l1=a.split(" ")
 	if intentbool=='true':
@@ -558,7 +558,7 @@ def create_data_when_before(a,intent,intentbool,entity,quit):
 		f1.write(content1)
 	f1.close()
 
-def create_data_where_process(a,intent,intentbool,entity):
+def create_data_where_process(a,intent,intentbool,entity,quit):
 	f1=open('data/data.json','a')
 	l1=a.split(" ")
 	if intentbool=='true':
@@ -649,7 +649,7 @@ def create_data_where_process(a,intent,intentbool,entity):
 		#print(content)
 		f1.write(content)
 	f1.close()
-def create_data_where_obj(a,intent,intentbool,entity):
+def create_data_where_obj(a,intent,intentbool,entity,quit):
 	f1=open('data/data.json','a')
 	l1=a.split(" ")
 	if intentbool=='true':
@@ -742,13 +742,13 @@ def create_data_where_obj(a,intent,intentbool,entity):
 	f1.close()
 def create_data_other(a,intent,intentbool,entity):
 	f1=open('data/data.json','a')
-	l1=a.split(" ")
 	intentstr=intent
-	notentity=['in','at','for','on','about','with','from','into','during','until','against','among','throughout','despite','towards','upon','of','to','by','like','over','before','between','after','since','without','under','within','along','following','across','behind','beyond','plus','except','but','up','out','around','down','off','above','near','a','the','an']
 	str1=a
 	str2=''
-	content='      {\n        '+'"text": '+'"' +str1+'",'+'\n        '+'"intent":'+'"'+intentstr+'",'+'\n        '+'"entity":['+str2+']'+'\n      '+'},\n'
-	#print(content)
+	if quit=='true':
+		content1='      {\n        '+'"text": '+'"' +str1+'",'+'\n        '+'"intent":'+'"'+intentstr+'",'+'\n        '+'"entity":['+str2+']'+'\n      '+'}\n'
+	else:
+		content='      {\n        '+'"text": '+'"' +str1+'",'+'\n        '+'"intent":'+'"'+intentstr+'",'+'\n        '+'"entity":['+str2+']'+'\n      '+'},\n'
 	f1.write(content)
 	f1.close()
 def close_data():
@@ -758,7 +758,7 @@ def close_data():
 	f1.close()
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index_data.html')
 
 if __name__ == '__main__':
 	app.run()
