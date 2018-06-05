@@ -5,30 +5,27 @@
   var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
 <script type="text/javascript">
-	$(function (){//not going in this function for some reason
-		var required = function(){
-		var intentbool=$('input[name="intent"]').val()?'true':'false';
-		if (intentbool=='false'){
-		alert("intent required");
-		//$("#keyword").attr("disabled", "disabled");
-		return false;
-		}
-		return true;}
-		});
   $(function() {
     var submit_form = function(e) {
 		var valid=true;
 		var other=$('#checkother:checked').is(':checked');
-		if (other=='true'){
-		valid=required();
+		if (other==true){
+		var intentbool=$('input[name="intent"]').val()?'true':'false';
+		if (intentbool=='false'){
+		alert("intent required");
+		//$("#keyword").attr("disabled", "disabled");
+		valid= false;
+		}
+		}
+		
 		var intentbool=$('input[name="intent"]').val()?'true':'false';
 		var intent=$('input[name="intent"]');
 		while (valid==false){
 		intent.change(function() {
-			valid=required();
+			valid=true;
 		});
 		}
-		}
+		
 	if (valid==true){
 	//var intentbool=$('input[name="intent"]').val()?'true':'false';
       $.getJSON($SCRIPT_ROOT + '/_create_data', {
@@ -53,7 +50,6 @@
       
 	  
 	  return false;
-    }
 	};
 	
 
@@ -79,7 +75,7 @@
   entity enabled: <input type="checkbox" name="enabled" id="enabled"><br /><br /><br />
   what: <input type="checkbox" name="checkwhat" id="checkwhat">    what do you mean by ____?<br />
   how (process): <input type="checkbox" name="checkhow" id="checkhow">     how is ____ done? <br />
-  when: <input type="checkbox" name="checkwhen" id="checkwhen"><br />
+  when: <input type="checkbox" name="checkwhen" id="checkwhen">      when does _____ occur?   <br />
   after: <input type="checkbox" name="checkafter" id="checkafter">      what happens after ____?<br />  
   before: <input type="checkbox" name="checkbefore" id="checkbefore">   what happens before ____?<br />
   how many: <input type="checkbox" name="checkhowmany" id="checkhowmany">    how many __________?<br />
